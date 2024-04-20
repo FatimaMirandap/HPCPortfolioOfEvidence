@@ -1,0 +1,15 @@
+Filename: c:\Users\Fatim\Downloads\part1\Portfolio_of_evidence\Part1_Benchmarking_and_Profiling\Julia.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    11    145.5 MiB    145.5 MiB           1   def calculate_z_serial_purepython(maxiter, zs, cs):
+    12    153.2 MiB      7.7 MiB           1       output = [0] * len(zs)
+    13    156.0 MiB -10739.1 MiB     1000001       for i in range(len(zs)):
+    14    156.0 MiB -10739.1 MiB     1000000           n = 0
+    15    156.0 MiB -10739.1 MiB     1000000           z = zs[i]
+    16    156.0 MiB -10739.1 MiB     1000000           c = cs[i]
+    17    156.0 MiB -207238.1 MiB    34219980           while abs(z) < 2 and n < maxiter:
+    18    156.0 MiB -196501.8 MiB    33219980               z = z * z + c
+    19    156.0 MiB -196502.0 MiB    33219980               n += 1
+    20    156.0 MiB -10739.1 MiB     1000000           output[i] = n
+    21    156.0 MiB     -0.0 MiB           1       return output
